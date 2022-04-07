@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+*{
+    font-family: 'Fredoka', sans-serif;
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    // transition: all .2s linear;
+}
+
+$red: #b80f0b;
+$bage: #b69b74;
+$boder-btn: #bfbfbf;
+$color-btn: #606370;
+$gray: #9f95a2;
+$blue: #1f3252;
+$bg: #f2f2f2;
+
+@mixin grid ($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: $bg;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $blue;
+        border-radius: 5rem;
+    }
+}
+
+.header{
+    position: absolute;
+    text-align: center;
+    padding: 1.5rem 16%;
+
+    .active {
+        background-color: var(--blue-bg);
+        box-shadow: var(--box-shadow);
+        padding: 0.5rem 9%;
+        display: flex;
+    }
+
+    a{
+        font-size: 1.5rem;
+        color: $gray;
+        padding: 0 2rem;
+        border-right: .1rem solid $gray;
+    }
+
+    a:hover{
+        color: $bage;
+    }
+
+    .nav-bw{
+        border-left: .1rem solid $gray;
+    }
+
+    .nav-end{
+        border: none;
+    }
+
+    .space{
+        display: inline-block;
+        width: 16rem;
+    }
+}
+
+.backgound{
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.home{
+    background-color: $bg;
+    height: 113rem;
+
+    .lamp{
+        top: 42rem;
+        position: absolute;
+        left: 18rem
+    }
+
+    .register-card{
+        display: grid;
+        grid-template-columns: 24rem 49rem 11rem 14rem;
+        grid-template-rows:  11rem 6rem 3rem 3rem;
+        position: relative;
+        margin-top: -35rem;
+        background-color: $blue;
+        width: 98rem;
+        margin-left: 25rem;
+        margin-right: 25rem;
+        gap: .5rem;
+        padding: .5rem;
+
+        .download{
+            background: url(../images/btn_taigame.jpg) no-repeat center top;
+            grid-column: 1/2;
+            grid-row: 1/2;    
+        }
+
+        .slider{
+            background: url(../images/slider-01.gif) no-repeat ;
+            grid-column: 2/3;
+            grid-row: 1/5;    
+        }
+
+        .gianghokybao{
+            background: url(../images/buttons-right.png) no-repeat ;
+            grid-column: 3/4;
+            grid-row: 1/2;    
+        }
+
+        .gianghokybao:hover {
+            background: url(../images/event-link-hover.png) no-repeat ;
+        }
+
+        .hotro{
+            background: url(../images/buttons-right.png) no-repeat -12rem top;
+            grid-column: 4/5;
+            grid-row: 1/2;    
+        }
+
+        .hotro:hover{
+            background: url(../images/event-link-hover.png) no-repeat -12rem top;  
+        }
+
+        .dangky{
+            background: url(../images/buttons-left.png) no-repeat top -0.4rem left;
+            grid-column: 1/2;
+            grid-row: 2/3;    
+        }
+
+        .dangky:hover{
+            background: url(../images/buttons-left.png) no-repeat top -0.4rem right;
+        }
+
+        .napvang{
+            background: url(../images/buttons-right.png) no-repeat bottom left;
+            grid-column: 3/4;
+            grid-row: 2/4;    
+        }
+
+        .napvang:hover{
+            background: url(../images/event-link-hover.png) no-repeat bottom left;
+        }
+
+        .napvip{
+            background: url(../images/buttons-right.png) no-repeat bottom right 0.5rem;
+            grid-column: 4/5;
+            grid-row: 2/4;  
+        }
+
+        .napvip:hover{
+            background: url(../images/event-link-hover.png) no-repeat bottom right 0.5rem;
+        }
+
+        .napthe{
+            background: url(../images/buttons-left.png) no-repeat;
+            background-position: 0 -6.5rem;
+            grid-column: 1/2;
+            grid-row: 3/5;    
+        }
+
+        .napthe:hover{
+            background-position: -25rem -6.5rem;
+        }
+
+        .phone{
+            background: url(../images/hotline.png) no-repeat ;
+            grid-column: 3/5;
+            grid-row: 4/5;    
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .gift{
+        margin-left: 25rem;
+        margin-right: 25rem;
+        padding-top: .5rem;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 74rem 23.5rem;
+        grid-template-rows:  9rem 20rem;
+        object-fit: cover;
+        gap: 0.5rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .gift-code{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: space-around;
+
+            .nhanqua{
+                flex: 1 1 20.5rem;
+                background: url(../images/cuuamlenh-vip-giftcode.png) no-repeat ;
+            }
+
+            .vip{
+                flex: 1 1 20.5rem;
+                background: url(../images/cuuamlenh-vip-giftcode.png) no-repeat top;
+            }
+
+            .nhapcode{
+                flex: 1 1 20.5rem;
+                background: url(../images/cuuamlenh-vip-giftcode.png) no-repeat right 0rem;;
+            }
+
+        }
+
+        .vothuat{
+            background-color: $blue;
+            position: relative;
+            grid-column: 2/3;
+            grid-row: 1/3;
+            display: flex;
+            flex: .5rem;
+            flex-direction: column;
+            border: .5rem solid $blue;
+
+            .baodien{
+                flex: 1 1 5rem;
+                background: url(../images/option-link.png) no-repeat;
+            }
+
+            .baodien:hover{
+                background: url(../images/option-link-hover.png) no-repeat;
+            }
+
+            .monphai{
+                flex: 1 1 5rem;
+                background: url(../images/option-link.png) no-repeat center -6rem;
+            }
+
+            .monphai:hover{
+                background: url(../images/option-link-hover.png) no-repeat center -6rem;
+            }
+
+            .tanthu{
+                flex: 1 1 5rem;
+                background: url(../images/option-link.png) no-repeat  center -12rem;
+            }
+
+            .tanthu:hover{
+                background: url(../images/option-link-hover.png) no-repeat center -12rem;
+            }
+
+            .vohoc{
+                flex: 1 1 5rem;
+                background: url(../images/option-link1.png) no-repeat;
+            }
+
+            .vohoc:hover{
+                background: url(../images/option-link1-hover.png) no-repeat;
+            }
+
+            .pvc-pet{
+                flex: 1 1 5rem;
+                background: url(../images/option-link2.png) no-repeat;
+            }
+
+            .pvc-pet:hover{
+                background: url(../images/option-link2-hover.png) no-repeat;
+            }
+        }
+
+        .news{
+
+            .header-news{
+                background: url(../images/news-header-bg.png) top center / cover no-repeat;
+                padding: 2rem 0;
+
+                a{
+                    font-size: 1.5rem;
+                    color: $bage;
+                    padding: 0 2rem;
+                    font-weight: 600;
+                }
+
+                a:hover{
+                    color: #fff;
+                }
+
+                :first-child{
+                    color: #f2f2f2;
+                }
+            }
+
+            .container{
+                border: .5rem solid $blue;
+                padding-right: 5rem;
+
+                .box{
+                    display: flex;
+                    padding: 2rem;
+                    gap: 2rem;
+
+                    .img{
+                        flex: 1 1 8rem;
+                        border: .5rem solid $bage;
+                        overflow:hidden;
+
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                        
+                    }
+
+                    .img:hover img{
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
+
+                    .content{
+                        flex: 1 1 45rem;
+                        line-height: 1.4;
+
+                        h3{
+                            font-size: 1.7rem;
+                            color: $red;
+                            font-weight: bolder;
+                            text-transform: uppercase;
+                            padding-left: .5rem;
+                            border-left: .5rem solid $red;
+                        }
+
+                        h3:hover{
+                            text-decoration: underline;
+                        }
+
+                        span{
+                            color: #ccc;
+                            font-size: 1.2rem;
+                            font-style: italic
+                        }
+
+                        p{
+                            color: $gray;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                .btn{
+                    display: flex;
+                    margin: 2rem 1rem;
+                    justify-content: end;
+                    gap: 1rem;
+                    
+                    a {
+                        font-size: 1.5rem;
+                        color: $color-btn;
+                        text-transform: uppercase;
+                        background-color: $blue;
+                        border: .5rem solid $boder-btn;
+                        padding: 1rem;
+                    }
+                }
+
+                .btn-1:hover{
+                    color: $red;
+                }
+
+                .btn-2:hover{
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    background: url(../images/bg-bottom.jpg) top center / cover no-repeat;
+    height: 24rem;
+    display: flex;
+    justify-content: center;
+    gap: 17rem;
+    padding-top: 14rem;
+
+    .content{
+        text-align: center;
+        padding-right: 23rem;
+
+        p{
+            color: #000;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            
+            span{
+                padding: 0 .5rem;
+                border-right: .2rem solid #000;
+            }
+        }
+    }
+}
