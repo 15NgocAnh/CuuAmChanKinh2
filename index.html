@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Cửu Âm Chân Kinh 2 | Game nhập vai</title>
 
     <link rel="icon" href="./images/cưu-am-chan-kinh2-vinaphone.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
-</head>
+
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 <body>
     <header class="header">
         <a href="">Tin tức</a>
@@ -29,7 +30,16 @@
     <div class="home">
         <div class="register-card">
             <a href="#" class="download"></a>
-            <a href="#" class="slider"></a>
+
+            <div href="#" class="swiper slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="slider-1 swiper-slide"></a>
+                    <a href="#" class="slider-2 swiper-slide"></a>
+                    <a href="#" class="slider-3 swiper-slide"></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
             <a href="#" class="gianghokybao"></a>
             <a href="#" class="hotro"></a>
             <a href="#" class="dangky"></a>
@@ -137,5 +147,9 @@
             <p>Địa chỉ: Tầng 6, Tòa nhà VieinBank, 01 Lê Quý Đôn, thành phố Huế, tỉnh Thừa Thiên Huế, Việt Nam</p>
         </div>
     </div>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>
